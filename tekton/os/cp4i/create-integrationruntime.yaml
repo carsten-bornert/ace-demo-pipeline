@@ -1,8 +1,8 @@
 apiVersion: appconnect.ibm.com/v1beta1
 kind: IntegrationRuntime
 metadata:
-  annotations:
-    appconnect.ibm.com/hibernate: 'false'
+  labels:
+    backup.appconnect.ibm.com/component: integrationruntime
   name: tea-tekton-cp4i
   namespace: cp4i
 spec:
@@ -11,7 +11,7 @@ spec:
   license:
     accept: true
     license: L-UAZF-8ZYQDD
-    use: CloudPakForIntegrationNonProductionFREE
+    use: AppConnectEnterpriseNonProductionFREE
   template:
     spec:
       containers:
@@ -29,4 +29,4 @@ spec:
     - teajdbc-policy
     - default-policy
     - teajdbc
-  version: 12.0
+  version: 12.0.10.0-r3
